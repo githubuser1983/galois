@@ -1,0 +1,13 @@
+# reverse input array of doubles
+input: {"type": "array", "items": "double"}
+output: {"type": "array", "items": "double"}
+action:
+  - let: { x : input}
+  - let: { z : input}
+  - let: { l : {a.len: [x]}}
+  - let: { i : l}
+  - while : { ">=" : [i,0]}
+    do:
+      - set : {z : {attr: z, path : [i] , to: {attr : x ,path : [ {"-":[{"-" : [l ,i]},1]}]  } } }
+      - set : {i : {-:[i,1]}}
+  - z
