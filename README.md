@@ -1,10 +1,9 @@
 # galois
 Multi-User Rest-Api Server for Deploying Portable Format For analytics
 
-How to use:
-First install falcon and titus.
-Then start for example with gunicorn server:api the server.
-Go then at curls/ and execute some scripts to see what happens.
+How to install and get started:
+https://github.com/orgesleka/galois/wiki/Installation-and-Getting-Started
+
 
 ==Rest-API==
 * each url for example /galois/home/gauss/ without a model is considered like a directory in linux
